@@ -23,8 +23,7 @@ const Footer = () => {
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                    
-                                        <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
+                                        <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4" disabled>
                                         Subscribe
                                         </button>
                                     </div>

@@ -16,13 +16,13 @@ export default function BuscarGif() {
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           </ul>
           <form class="col-12 col-lg-auto mb-6 mb-lg-0 me-lg-6">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Busqueda de GIF"
-                value={searchKeyword}
-                onChange={handleInputChange}
-              />
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Busqueda de GIF"
+                  value={searchKeyword}
+                  onChange={handleInputChange}
+                />
           </form>
         </div>
       </div>
