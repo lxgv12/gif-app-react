@@ -1,14 +1,33 @@
 import React from 'react';
+import { useParams, Link } from 'react-router-dom';
+import '../styles/Card.css';
 
-export default function DetailGif(props) {
-  const { id } = props.match.params; // Obtiene el valor de "id" desde la URL
-  // Lógica específica para DetailGif
-  console.log('id', id)
-  return (
-    <div>
-      {/* Utiliza la propiedad id aquí */}
-      <h1>Detalle del gif {id}</h1>
-      {/* Agrega más contenido específico para DetailGif */}
-    </div>
+export default function DetailGif() {
+  const { url } = useParams();
+  const decodedUrl = decodeURIComponent(url);
+
+  return (  
+    <>
+      <Link to={'/'}>
+          <button type="button" class="btn btn-success">Inicio</button>
+      </Link>
+      <br/>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Detalle del Gif</h5>
+              <p class="card-text">
+                  <img 
+                      src={decodedUrl} alt="Gif" 
+                      className="gif-img"
+                      width={500}
+                      height={500}
+                  />
+              </p>
+          </div>
+        </div>
+      </div>
+      
+    </>
   );
 }

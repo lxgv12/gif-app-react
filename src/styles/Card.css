@@ -1,0 +1,8 @@
+.card {
+    display: flex;
+    align-items: center;
+}
+
+.card-container {
+    padding: 25px; /* Ajusta el valor según tus necesidades */
+}

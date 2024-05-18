@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import ListOfGifs from './ListOfGifs';
+import Footer from "./Footer"
+import Carousel from './Carousel';
 
 export default function BuscarGif() {
   const [searchKeyword, setSearchKeyword] = useState('');
@@ -10,6 +12,7 @@ export default function BuscarGif() {
 
   return (
     <>
+    <Carousel />
     <header class="p-3 mb-3 border-bottom">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -29,6 +32,8 @@ export default function BuscarGif() {
     </header>
     <br/>
     <ListOfGifs keyword={searchKeyword} />
+    <br/>
+    <Footer />
     </>
   );
 }

@@ -10,8 +10,8 @@ export default function getGifs({keyword = 'kitty black'} = {}) {
        const gifs = data.map(image => 
         {
             const {images, title, id} = image 
-            const {url, mp4} = images.fixed_width
-            return {title, id, url, mp4}
+            const {url} = images.fixed_width
+            return {title, id, url}
         })
        return gifs
     })

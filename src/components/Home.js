@@ -1,19 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BuscarGif from "./BuscarGif"
-import Footer from "./Footer"
-import Carousel from './Carousel';
+import DetailGif from './DetailGif'
 
 export default function Home() {
   return (
     <>
-      <Carousel />
       <Router>
         <Routes>
-            <Route path="/" element={<BuscarGif />} />
+            <Route exact path="/" element={<BuscarGif />} />
+            <Route exact path="/detalle-gif/:url" element={<DetailGif />} />
         </Routes>
       </Router>
-      <Footer />
     </>
   );
 }
